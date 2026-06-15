@@ -1,0 +1,46 @@
+{
+  "name": "@tunnelhunt/mcp",
+  "version": "1.0.1",
+  "description": "An MCP server for exposing local ports via Tunnelhunt reverse SSH tunnels",
+  "main": "build/index.js",
+  "type": "module",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node build/index.js",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tunnelhunt/mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tunnelhunt/mcp/issues"
+  },
+  "homepage": "https://github.com/tunnelhunt/mcp#readme",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "tunnelhunt",
+    "ssh",
+    "tunnel"
+  ],
+  "author": "tunnelhunt",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "bin": {
+    "tunnelhunt-mcp": "./build/index.js"
+  }
+}
